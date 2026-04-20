@@ -7,28 +7,43 @@
 
 /* root variables  */
 :root {
+    --angle: 0deg;
+    --color1: #22d3ee;
+    --color2: #0ea5e9;
+    --color3: #f59e0b;
+    --color4: #22d3ee;
+    --main: linear-gradient(135deg, #22d3ee, #0ea5e9, #f59e0b, #22d3ee);
+    --bg: #081120;
+    --surface: #0f1b2d;
+    --surface-soft: #13233a;
+    --text: #f8fafc;
+    --muted: #cbd5e1;
+    --btn: linear-gradient(135deg, #22d3ee, #0ea5e9, #f59e0b, #22d3ee);
+    --hover: linear-gradient(45deg, #3ddcf4, #38bdf8, #fbbf24, #3ddcf4);
+    --shadow: rgba(34, 211, 238, 0.35);
+    --border: #f59e0b;
     --backGroundcolor:
-        radial-gradient(circle at top left, rgba(16, 185, 129, 0.22) 0%, transparent 34%),
-        radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.14) 0%, transparent 28%),
-        linear-gradient(145deg, #041510 0%, #0a221a 50%, #123126 100%);
-    --surfaceColor: #0c1f18;
-    --navColor: rgba(4, 21, 16, 0.88);
-    --cardColor: #143127;
-    --textColor: #f3fff9;
-    --bodyTextColor: #d2f4e4;
-    --headingColor: #6ee7b7;
-    --boxShadowColor: #10b981;
-    --activeColor: #facc15;
-    --hoverColor: #a7f3d0;
-    --progressColor: #22c55e;
-    --borderColor: #10b981;
-    --buttonColor: #059669;
-    --buttonGradient: linear-gradient(135deg, #059669 0%, #10b981 52%, #34d399 100%);
-    --buttonGradientHover: linear-gradient(135deg, #10b981 0%, #34d399 52%, #6ee7b7 100%);
-    --ringBaseColor: #ecfdf5;
-    --softShadowColor: #17332a;
-    --logoBackgroundColor: #0d241c;
-    --inputTextColor: #f3fff9;
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.22) 0%, transparent 34%),
+        radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.14) 0%, transparent 28%),
+        linear-gradient(145deg, #081120 0%, #0f1b2d 50%, #13233a 100%);
+    --surfaceColor: #0f1b2d;
+    --navColor: rgba(8, 17, 32, 0.88);
+    --cardColor: #13233a;
+    --textColor: #f8fafc;
+    --bodyTextColor: #cbd5e1;
+    --headingColor: #22d3ee;
+    --boxShadowColor: #22d3ee;
+    --activeColor: #f59e0b;
+    --hoverColor: #3ddcf4;
+    --progressColor: #0ea5e9;
+    --borderColor: #f59e0b;
+    --buttonColor: #0ea5e9;
+    --buttonGradient: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 52%, #f59e0b 100%);
+    --buttonGradientHover: linear-gradient(135deg, #3ddcf4 0%, #38bdf8 52%, #fbbf24 100%);
+    --ringBaseColor: #f8fafc;
+    --softShadowColor: rgba(34, 211, 238, 0.18);
+    --logoBackgroundColor: #0f1b2d;
+    --inputTextColor: #f8fafc;
 }
 
 body.theme {
