@@ -27,7 +27,7 @@
         radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.14) 0%, transparent 28%),
         linear-gradient(145deg, #081120 0%, #0f1b2d 50%, #13233a 100%);
     --surfaceColor: #0f1b2d;
-    --navColor: rgba(8, 17, 32, 0.88);
+    --navColor: rgba(8, 17, 32, 0.6);
     --cardColor: #13233a;
     --textColor: #f8fafc;
     --bodyTextColor: #cbd5e1;
@@ -53,7 +53,7 @@ body.theme {
         radial-gradient(circle at center top, rgba(255, 244, 214, 0.12) 0%, transparent 30%),
         linear-gradient(145deg, #1b1205 0%, #3a2409 34%, #6b4312 100%);
     --surfaceColor: rgba(45, 28, 7, 0.56);
-    --navColor: rgba(36, 22, 6, 0.86);
+    --navColor: rgba(36, 22, 6, 0.6);
     --cardColor: rgb(72, 44, 11);
     --textColor: #fff7e3;
     --bodyTextColor: #f1deb2;
