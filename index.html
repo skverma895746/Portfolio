@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my portfolio</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ðŸŒˆ Background Theme */
+        body {
+            background:
+                radial-gradient(circle at top right, rgba(34, 211, 238, 0.24), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.22), transparent 46%),
+                linear-gradient(135deg, #081120, #0f1b2d, #13233a, #081120);
+            color: #f8fafc;
+            height: 100%;
+        }
+
+        /* ðŸ“¦ Glass Container */
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+
+
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+            animation: fadeIn 1.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ðŸ‘‹ Greeting Text */
+        .container .greet h2 {
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            color: #cbd5e1;
+        }
+
+        /* ðŸŒŸ Welcome Heading */
+        .container .welcome h1 {
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            text-align: center;
+            color: transparent;
+            background: linear-gradient(135deg, #22d3ee, #0ea5e9, #f59e0b, #22d3ee);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        /* ðŸ”˜ Button Group */
+        .container .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ðŸŽ¯ Buttons */
+        button {
+            width: 180px;
+            height: 45px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #081120;
+            cursor: pointer;
+            background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 52%, #f59e0b 100%);
+            box-shadow: 0 8px 20px rgba(34, 211, 238, 0.35);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 28px rgba(14, 165, 233, 0.4);
+        }
+        .loader {
+            width: 100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top:0;
+            left:0;
+            backdrop-filter: blur(10px);
+            background: transparent;
+            z-index: 999;
+        }
+         .loader .spinCon{
+            padding:15px;
+            border-radius:10px;
+            background:rgba(255,255,255,0.1);
+            animation: loading 1s linear 0.5s infinite;
+         }
+        .loader .spinCon .spiner {
+            width:60px;
+            height:60px;
+            border-radius: 50%;
+            border: 8px solid white;
+            border-top: 8px solid #10b981;
+            /* Emerald Green */
+            animation: spiner 1s linear 0.5s infinite;
+        }
+      @keyframes loading {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes spiner {
+            0% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        /* âœ¨ Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ðŸ“± Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+
+            .container .welcome h1 {
+                font-size: 2rem;
+            }
+
+            button {
+                width: 150px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- loader  -->
+    <div class="loader">
+        <div class="spinCon">
+        <div class="spiner"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="greet">
+            <h2><!-- greeting word here  --></h2>
+        </div>
+        <div class="welcome">
+            <h1>Welcome to my portfolio</h1>
+        </div>
+        <div class="button-group">
+            <button onclick="window.history.back()">
+                Go Back</button>
+            <button onclick="window.location.href='portfolio.html'">View Portfolio</button>
+        </div>
+    </div>
+    <!-- script  -->
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            // Remove loader from the screen after fade-out
+            setTimeout(() => {
+                loader.style.display = "none";
+            },5000);
+        });
+        const greet = document.querySelector(".greet h2");
+        const now = new Date();
+        const hours = now.getHours();
+        if (hours >= 5 && hours < 12) {
+            greet.textContent = "Good Morning";
+
+        }
+        else if (hours >= 12 && hours < 17) {
+            greet.textContent = "Good Afternoon";
+        }
+        else if (hours >= 17 && hours < 21) {
+            greet.textContent = "Good Evening";
+        }
+        else {
+            greet.textContent = "Good Night";
+
+        }
+    </script>
+</body>
+
+</html>
