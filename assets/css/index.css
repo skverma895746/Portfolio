@@ -71,6 +71,7 @@ body.theme {
     --logoBackgroundColor: #4b2e0c;
     --inputTextColor: #fff7e3;
 }
+
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -90,6 +91,7 @@ body {
     background: var(--backGroundcolor);
     color: var(--bodyTextColor);
 }
+
 .container {
     background: var(--surfaceColor);
 }
@@ -311,7 +313,7 @@ section {
     width: 380px;
     height: 380px;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 50% 50% 0% 0%;
     padding: 2px;
     box-shadow: 0px 0px 1px 1px var(--boxShadowColor);
     background: conic-gradient(from var(--angle), var(--ringBaseColor), var(--progressColor));
@@ -332,7 +334,8 @@ section {
     width: 100%;
     height: 100%;
     filter: contrast(1.5);
-    border-radius: 50%;
+    object-fit:cover;
+    border-radius: inherit;
 }
 
 .aboutMe .contentContainer .textContents {
@@ -390,7 +393,7 @@ section {
     width: 500px;
     height: 175px;
     padding: 1px;
-    border-radius: 10px;
+    border-radius:4px;
     box-shadow: 0px 0px 1px 1px var(--boxShadowColor);
     background: conic-gradient(from var(--angle), var(--ringBaseColor), var(--progressColor));
     animation: rotate 5s linear 0.5s infinite forwards;
@@ -457,7 +460,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
 .skills .skillContainer .skillCon {
@@ -466,8 +469,9 @@ section {
     grid-template-columns: repeat(6, 180px);
     padding: 20px;
     border-radius: 10px;
-    gap:5px;
+    gap: 5px;
 }
+
 .skills .skillContainer .skillCon .skills-wrapper {
     display: flex;
     height: 200px;
@@ -492,6 +496,7 @@ section {
     border-radius: inherit;
     filter: contrast(1.2);
 }
+
 /* projects  */
 .projects {
     display: flex;
@@ -513,30 +518,32 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 5px;
-    box-shadow: 0px 0px 1px 1px var(--boxShadowColor);
+    border-radius:4px;
+    box-shadow: 0px 0px 5px 1px var(--boxShadowColor);
     transition: transform 0.5s;
-    gap:10px;
+    gap: 10px;
 }
 
 .projects .project-Container .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0px 0px 10px 1px var(--boxShadowColor);
 }
+
 .projects .project-Container .project-card .imageCon {
-      width: 120px;
-      height:120px;
-      margin-top:20px;
-       border-radius: 50%;
-       overflow: hidden;
-       display:flex;
-       justify-content: center;
-       align-items: center;
-       box-shadow: 5px 5px 10px var(--boxShadowColor);
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px var(--boxShadowColor);
 }
+
 .projects .project-Container .project-card .imageCon img {
     width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: inherit;
     filter: contrast(1.2);
 }
@@ -549,6 +556,44 @@ section {
     text-align: center;
     margin: 5px 0px;
     color: var(--headingColor)
+}
+
+/* certificate and experience  */
+.certificate-experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.certificate-experience .cert-experience-container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.certificate-experience .cert-experience-container .cert-experience-card {
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    border-radius:4px;
+    box-shadow: 0px 0px 5px 1px var(--boxShadowColor);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    border-bottom: 3px solid var(--borderColor);
+    transition: transform 0.5s;
+}
+.certificate-experience .cert-experience-container .cert-experience-card>h4 {
+    color: var(--headingColor);
+}
+.certificate-experience .cert-experience-container .cert-experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 0px 10px 1px var(--boxShadowColor);
 }
 
 /* contact me  */
@@ -653,7 +698,7 @@ section {
 }
 
 /* desktop screen  */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
 
     main,
     section {
@@ -786,6 +831,30 @@ section {
         grid-template-columns: repeat(2, minmax(150px, 170px));
         gap: 10px;
     }
+
+    .certificate-experience .cert-experience-container {
+        flex-direction: column;
+        gap:10px;
+        width: calc(100% - 30px);
+        border-left: 3px solid var(--borderColor);
+    }
+
+    .certificate-experience .cert-experience-container .cert-experience-card {
+        width: calc(100% - 30px);
+        height: 180px;
+    }
+    .certificate-experience .cert-experience-container .cert-experience-card::before {
+    content: "";
+    position: absolute;
+    top:0px;
+    left:-26px;
+    width:20px;
+    height:20px;
+    background: var(--borderColor);
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 1px 1px var(--boxShadowColor);
+}
 
     /* contact me  */
     .contact .contact-container {
