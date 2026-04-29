@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080d14;
+    --surface: rgba(14, 22, 33, 0.78);
+    --card: rgba(19, 30, 45, 0.82);
+    --card-strong: #132033;
+    --nav: rgba(8, 13, 20, 0.78);
+    --text: #f8fafc;
+    --muted: #b7c3d4;
+    --line: rgba(255, 255, 255, 0.12);
+    --activeColor: #f8b84e;
+    --accent: #22d3ee;
+    --accent2: #38bdf8;
+    --success: #34d399;
+    --shadow: rgba(0, 0, 0, 0.35);
+    --gradient: linear-gradient(135deg, var(--accent), var(--accent2) 52%, var(--activeColor));
+}
+
+body.theme {
+    --bg: #151009;
+    --surface: rgba(44, 31, 15, 0.8);
+    --card: rgba(72, 50, 24, 0.82);
+    --card-strong: #503619;
+    --nav: rgba(38, 27, 14, 0.82);
+    --text: #fff8e8;
+    --muted: #ead8ae;
+    --line: rgba(255, 226, 165, 0.18);
+    --activeColor: #ffd36e;
+    --accent: #f7a935;
+    --accent2: #e3c36e;
+    --success: #8bd886;
+    --gradient: linear-gradient(135deg, #9c6418, #d18d25 55%, #ffdc84);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--muted);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 15% 12%, rgba(52, 211, 153, 0.13), transparent 28%),
+        radial-gradient(circle at 85% 16%, rgba(34, 211, 238, 0.16), transparent 30%),
+        radial-gradient(circle at 78% 88%, rgba(248, 184, 78, 0.13), transparent 30%),
+        var(--bg);
+    background-size: 44px 44px, 44px 44px, auto, auto, auto, auto;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px clamp(18px, 5vw, 72px);
+    border-bottom: 1px solid var(--line);
+    background: var(--nav);
+    backdrop-filter: blur(18px);
+}
+
+.nav-logo h1 {
+    color: var(--text);
+    font-size: clamp(1.28rem, 2.35vw, 1.75rem);
+    font-weight: 800;
+}
+
+.nav-logo span,
+.title span,
+.heading span,
+.autotyped span {
+    color: var(--activeColor);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.4vw, 18px);
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: color 180ms ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    transform: scaleX(0);
+    background: var(--gradient);
+    transition: transform 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.themeColor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switch {
+    position: relative;
+    width: 52px;
+    height: 30px;
+    border-radius: 999px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    border: 1px solid var(--line);
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gradient);
+    transition: transform 220ms ease;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+.mobileIcon {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+main,
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 110px clamp(18px, 5vw, 72px) 72px;
+}
+
+.main {
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+.eyebrow {
+    color: var(--activeColor);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.heading h1 {
+    color: var(--text);
+    font-size: clamp(2.7rem, 7vw, 6.2rem);
+    line-height: 1;
+}
+
+.autotyped h2 {
+    color: var(--text);
+    font-size: clamp(1.35rem, 3vw, 2.4rem);
+}
+
+.text {
+    max-width: 920px;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.socialMedia a,
+.button a,
+.textContents a,
+.section-link,
+.cert-experience-card a,
+.contact-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.08);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.socialMedia a {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+}
+
+.button a,
+.textContents a,
+.section-link {
+    min-width: 190px;
+    min-height: 50px;
+    padding: 0 22px;
+    background: var(--gradient);
+    color: #07111b;
+    border-color: transparent;
+}
+
+.projects .section-link {
+    margin-top: 16px;
+}
+
+.socialMedia a:hover,
+.button a:hover,
+.textContents a:hover,
+.section-link:hover,
+.cert-experience-card a:hover,
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.title h1,
+.contact h1 {
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1.05;
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(280px, 1.2fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 70px);
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.imageCon {
+    width: min(360px, 78vw);
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--gradient);
+    padding: 4px;
+    box-shadow: 0 28px 70px var(--shadow);
+}
+
+.imageCon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.textContents {
+    display: grid;
+    gap: 24px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.educationContainer,
+.cert-experience-container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.edu-card,
+.cert-experience-card,
+.project-card,
+.contact-form {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 34%), var(--card);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+}
+
+.edu-card {
+    min-height: 182px;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+    padding: 18px;
+}
+
+.picCon {
+    width: 74px;
+    height: 74px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--card-strong);
+    border: 1px solid var(--line);
+}
+
+.picCon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textCon {
+    display: grid;
+    gap: 6px;
+}
+
+.textCon h4,
+.cert-experience-card h4,
+.projectContent h4,
+.skills-wrapper h3 {
+    color: var(--text);
+}
+
+.textCon i,
+.cert-experience-card i {
+    color: var(--activeColor);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.textCon p,
+.cert-experience-card p,
+.projectContent p {
+    line-height: 1.65;
+    font-size: 0.92rem;
+}
+
+.textCon a,
+.projectContent a {
+    color: var(--activeColor);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.skillCon {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(130px, 1fr));
+    gap: 16px;
+}
+
+.skills-wrapper {
+    min-height: 178px;
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.skillLogo-Container {
+    width: 94px;
+    height: 94px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 50%;
+    background: conic-gradient(var(--activeColor) 0deg, rgba(255, 255, 255, 0.1) 0deg);
+}
+
+.skillLogo-Container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--card-strong);
+}
+
+.skills-wrapper span {
+    color: var(--activeColor);
+    font-weight: 800;
+}
+
+.project-Container {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    overflow: hidden;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover,
+.cert-experience-card:hover,
+.edu-card:hover,
+.skills-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.26);
+}
+
+.project-card .imageCon {
+    width: 100%;
+    height: 168px;
+    border: 0;
+    border-radius: 0;
+    padding: 14px;
+    box-shadow: none;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 42%),
+        var(--card-strong);
+}
+
+.project-card .imageCon img {
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.projectContent {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+}
+
+.projects,
+.certificate-experience {
+    align-items: center;
+}
+
+.cert-experience-container {
+    grid-template-columns: repeat(5, minmax(170px, 1fr));
+}
+
+.cert-experience-card {
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 18px;
+}
+
+.cert-experience-card a {
+    margin-top: auto;
+    min-height: 38px;
+    font-size: 0.9rem;
+}
+
+.contact {
+    align-items: center;
+}
+
+.contact-container {
+    width: min(850px, 100%);
+}
+
+.contact-form {
+    display: grid;
+    gap: 18px;
+    padding: clamp(18px, 4vw, 34px);
+}
+
+#error {
+    min-height: 22px;
+    color: var(--activeColor);
+    font-weight: 700;
+}
+
+.form-group {
+    min-height: 48px;
+}
+
+.form-group.message {
+    min-height: 150px;
+}
+
+input,
+textarea {
+    width: 100%;
+    height: 100%;
+    resize: vertical;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    outline: none;
+    padding: 14px 16px;
+    color: var(--text);
+    font: inherit;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+}
+
+.contact-form button {
+    min-height: 50px;
+    border: 0;
+    color: #07111b;
+    cursor: pointer;
+    background: var(--gradient);
+}
+
+.footer {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    padding: 28px 18px;
+    border-top: 1px solid var(--line);
+    background: var(--nav);
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 1120px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 18px;
+        width: min(330px, calc(100vw - 36px));
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--nav);
+    }
+
+    .nav-links.openClose {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .mobileIcon {
+        display: inline-grid;
+        place-items: center;
+    }
+
+    .skillCon,
+    .project-Container,
+    .cert-experience-container {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 1180px) {
+    .educationContainer {
+        align-items: stretch;
+    }
+
+    .edu-cardCon,
+    .edu-card {
+        height: 100%;
+    }
+
+    .edu-card {
+        min-height: 230px;
+    }
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        padding-left: 16px;
+        padding-right: 12px;
+    }
+
+    main,
+    section {
+        min-height: auto;
+        padding-top: 98px;
+    }
+
+    .contentContainer,
+    .educationContainer,
+    .project-Container,
+    .cert-experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skillCon {
+        grid-template-columns: repeat(2, minmax(135px, 1fr));
+        gap: 12px;
+    }
+
+    .skills-wrapper {
+        min-height: 158px;
+        padding: 12px;
+    }
+
+    .skillLogo-Container {
+        width: 82px;
+        height: 82px;
+    }
+
+    .contentContainer {
+        text-align: left;
+    }
+
+    .edu-card {
+        grid-template-columns: 1fr;
+    }
+
+    .picContainer {
+        display: none;
+    }
+
+    .heading h1 {
+        font-size: clamp(2.4rem, 13vw, 4.2rem);
+    }
+
+    .button a {
+        min-width: 220px;
+    }
+}

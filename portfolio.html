@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title><!-- FIX 1: Typo "Portifilio" → "Portfolio" -->
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="icon" href="assets/images/pic.jpg">
+    <title>Sandeep Kumar | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- FIX 2: Font Awesome changed to v6.5.0 (stable) — v7.x does not exist yet -->
+    <link rel="icon" href="assets/images/pic.jpg">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- maincontainer -->
         <nav class="navbar">
-            <!-- navbar  -->
             <div class="nav-logo">
-                <h1>Sandeep <span style="color:var(--activeColor)">Kumar</span></h1>
+                <h1>Sandeep <span>Kumar</span></h1>
             </div>
             <div class="nav-links">
-                <a href="#main" style="color:var(--activeColor)">Home</a>
+                <a href="#main" class="active">Home</a>
                 <a href="#aboutMe">About Me</a>
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
@@ -33,85 +33,52 @@
                     <input type="checkbox" id="themeToggle" aria-label="Toggle theme">
                     <span class="slider"></span>
                 </label>
-
-                <div class="mobileIcon">
-                    ☰
-                </div>
+                <button class="mobileIcon" type="button" aria-label="Open navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </nav>
-        <!-- main  -->
+
         <main class="main" id="main">
+            <p class="eyebrow">Web Developer & Data Analyst Enthusiast</p>
             <div class="heading">
-                <h1>Hi,I'm <span style="color:var(--activeColor)">Sandeep Kumar</span></h1>
+                <h1>Hi, I'm <span>Sandeep Kumar</span></h1>
             </div>
             <div class="autotyped">
-                <h2>I'm <span style="color:var(--activeColor)" id="autotype">Web Developer</span></h2>
+                <h2>I'm <span id="autotype">Web Developer</span></h2>
             </div>
             <div class="text">
-                <p>I'm a B.Tech 3rd-year student at Rajkiya Engineering College, Bijnor, with a strong passion for
-                    problem-solving and exploring innovative, dynamic ideas.
-                    As a Full Stack Development enthusiast and Front-End Web Developer, I focus on creating clean,
-                    efficient, and well-structured code along with pixel-perfect, user-friendly designs.
-                    I enjoy learning new technologies and turning creative ideas into functional, responsive web
-                    solutions.
-                </p>
+                <p>I'm a B.Tech 3rd-year student at Rajkiya Engineering College, Bijnor, with a strong passion for problem-solving, web development, and data analytics. As a Full Stack Development enthusiast, Front-End Web Developer, and aspiring Data Analyst, I focus on creating clean, efficient, and well-structured code along with pixel-perfect, user-friendly designs. I also enjoy working with SQL, Python, Power BI, and dashboards to turn raw data into clear insights and practical decisions.</p>
             </div>
             <div class="socialMedia">
-                <!-- FIX 3: Added aria-label to all social links for accessibility -->
-                <a href="https://wa.me/918957461049" target="_blank" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/jigyasu.raj/?igsh=aHJnODZ4dno0azc2#" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/sandeepkumar8957/" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/skverma895746" target="_blank" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.youtube.com/@World_of_devine" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                <a href="https://wa.me/918957461049" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/jigyasu.raj/?igsh=aHJnODZ4dno0azc2#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sandeepkumar8957/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/skverma895746" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@World_of_devine" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="button">
-                <a href="#skills">Explore My Work ➜</a>
+                <a href="#skills">Explore My Work <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </main>
-        <!-- About Me  -->
+
         <section class="aboutMe" id="aboutMe">
             <div class="title">
-                <h1>About <span style="color:var(--activeColor)">Me</span></h1>
+                <h1>About <span>Me</span></h1>
             </div>
             <div class="contentContainer">
                 <div class="image">
                     <div class="imageCon">
                         <img src="assets/images/pic.png" alt="Sandeep Kumar profile photo">
-                        <!-- FIX 4: Meaningful alt text -->
                     </div>
                 </div>
                 <div class="textContents">
-                    <p>
-                        My name is Sandeep Verma, and I have successfully completed my 10th and 12th education from
-                        Divyabha Intermediate College, Shripalpur, Lalganj, Ballia, Uttar Pradesh.
-                        I then pursued a Diploma in Engineering from Government Polytechnic, Lucknow, which helped me
-                        build a strong technical foundation.
-
-                        Currently, I am pursuing a B.Tech in Information Technology from Rajkiya Engineering College,
-                        Bijnor.
-                        I am passionate about learning new technologies, solving problems, and enhancing my skills in
-                        the IT field.
-                        My goal is to grow as a skilled professional and contribute effectively to the world of
-                        technology through innovation and continuous learning.
-                    </p>
-                    <br>
-                    <a href="assets/images/SandResume.pdf">Resume
-                        <i class="fa-solid fa-circle-arrow-down"></i>
-                    </a>
+                    <p>My name is Sandeep Verma, and I have successfully completed my 10th and 12th education from Divyabha Intermediate College, Shripalpur, Lalganj, Ballia, Uttar Pradesh. I then pursued a Diploma in Engineering from Government Polytechnic, Lucknow, which helped me build a strong technical foundation. Currently, I am pursuing a B.Tech in Information Technology from Rajkiya Engineering College, Bijnor. I am passionate about web development, data analytics, problem-solving, and learning new technologies. My goal is to grow as a skilled professional who can build useful digital products and analyze data to support smarter decisions.</p>
+                    <a href="assets/images/SandResume.pdf">Resume <i class="fa-solid fa-circle-arrow-down"></i></a>
                 </div>
             </div>
         </section>
-        <!-- Education  -->
+
         <section class="education" id="education">
             <div class="title">
                 <h1>Education</h1>
@@ -119,249 +86,113 @@
             <div class="educationContainer">
                 <div class="edu-cardCon">
                     <div class="edu-card">
-                        <div class="picContainer">
-                            <div class="picCon">
-                                <img src="assets/images/school.png" alt="School logo">
-                                <!-- FIX 5: Descriptive alt text on all education images -->
-                            </div>
-                        </div>
+                        <div class="picContainer"><div class="picCon"><img src="assets/images/school.png" alt="School logo"></div></div>
                         <div class="textCon">
                             <h4>High School (10th Grade)</h4>
-                            <i>Divyabha Intermediate College, Shripalpur, Lalganj, Ballia, Uttar Pradesh</i>
+                            <i>Divyabha Intermediate College, Ballia</i>
                             <h4>Completed in 2019</h4>
-                            <p>Built a strong academic foundation and interest in analytical subjects.
-                                <a href="https://www.facebook.com/Kosalendra.Tiwari.DIC/" target="_blank">Click here</a>
-                            </p>
+                            <p>Built a strong academic foundation and interest in analytical subjects. <a href="https://www.facebook.com/Kosalendra.Tiwari.DIC/" target="_blank">Click here</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="edu-cardCon">
                     <div class="edu-card">
-                        <div class="picContainer">
-                            <div class="picCon">
-                                <img src="assets/images/school.png" alt="School logo">
-                            </div>
-                        </div>
+                        <div class="picContainer"><div class="picCon"><img src="assets/images/school.png" alt="School logo"></div></div>
                         <div class="textCon">
                             <h4>Intermediate (12th Grade)</h4>
-                            <i>Divyabha Intermediate College, Shripalpur, Lalganj, Ballia, Uttar Pradesh</i>
+                            <i>Divyabha Intermediate College, Ballia</i>
                             <h4>Completed in 2021</h4>
-                            <p>Focused on science stream; and logical thinking.
-                                <a href="https://www.facebook.com/Kosalendra.Tiwari.DIC/" target="_blank">Click here</a>
-                            </p>
+                            <p>Focused on science stream and logical thinking. <a href="https://www.facebook.com/Kosalendra.Tiwari.DIC/" target="_blank">Click here</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="edu-cardCon">
                     <div class="edu-card">
-                        <div class="picContainer">
-                            <div class="picCon">
-                                <img src="assets/images/gpl.png" alt="Government Polytechnic Lucknow logo">
-                            </div>
-                        </div>
+                        <div class="picContainer"><div class="picCon"><img src="assets/images/gpl.png" alt="Government Polytechnic Lucknow logo"></div></div>
                         <div class="textCon">
                             <h4>Diploma in Engineering (IT)</h4>
                             <i>Government Polytechnic, Lucknow</i>
                             <h4>Completed in 2024</h4>
-                            <p>Gained a strong foundation in technical and programming skills with hands-on project
-                                experience.
-                                <!-- FIX 6: Removed empty href — no link until you have a real URL -->
-                            </p>
+                            <p>Gained a strong foundation in technical and programming skills with hands-on project experience.</p>
                         </div>
                     </div>
                 </div>
                 <div class="edu-cardCon">
                     <div class="edu-card">
-                        <div class="picContainer">
-                            <div class="picCon">
-                                <img src="assets/images/recb.png" alt="Rajkiya Engineering College Bijnor logo">
-                            </div>
-                        </div>
+                        <div class="picContainer"><div class="picCon"><img src="assets/images/recb.png" alt="Rajkiya Engineering College Bijnor logo"></div></div>
                         <div class="textCon">
                             <h4>Bachelor of Technology (IT)</h4>
-                            <!-- FIX 7: Typo "Technoloy" → "Technology" -->
                             <i>Rajkiya Engineering College, Bijnor</i>
-                            <h4>2024 – Present</h4>
-                            <p>Currently pursuing B.Tech with a focus on Web development, and Data Analytics.
-                                <!-- FIX 6: Removed empty href -->
-                            </p>
+                            <h4>2024 - Present</h4>
+                            <p>Currently pursuing B.Tech with a focus on Web Development and Data Analytics.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- skills  -->
+
         <section class="skills" id="skills">
             <div class="title">
                 <h1>Skills</h1>
             </div>
             <div class="skillContainer">
                 <div class="skillCon">
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container htmlCon">
-                            <img src="assets/images/HTML.png" alt="HTML5 logo">
-                            <!-- FIX 8: Meaningful alt text on all skill images -->
-                        </div>
-                        <h3>HTML5</h3>
-                        <span class="html">95%</span>
-                        <!-- FIX 9: Varied skill levels to look more credible -->
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container cssCon">
-                            <img src="assets/images/CSS3.png" alt="CSS3 logo">
-                        </div>
-                        <h3>CSS3</h3>
-                        <span class="css">92%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container jsCon">
-                            <img src="assets/images/javascript.png" alt="JavaScript logo">
-                        </div>
-                        <h3>JavaScript</h3>
-                        <span class="javascript">85%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container reactCon">
-                            <img src="assets/images/React.png" alt="React.js logo">
-                        </div>
-                        <h3>React.js</h3>
-                        <span class="react">80%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container bootstrapCon">
-                            <img src="assets/images/Bootstrap.png" alt="Bootstrap logo">
-                        </div>
-                        <h3>Bootstrap</h3>
-                        <span class="bootstrap">88%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container nodeCon">
-                            <img src="assets/images/nodejs.png" alt="Node.js logo">
-                        </div>
-                        <h3>Node.js</h3>
-                        <span class="node">75%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container expressCon">
-                            <img src="assets/images/express.png" alt="Express.js logo">
-                        </div>
-                        <h3>Express</h3>
-                        <span class="express">75%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container mongodbCon">
-                            <img src="assets/images/mongodb.png" alt="MongoDB logo">
-                        </div>
-                        <h3>MongoDB</h3>
-                        <span class="mongodb">70%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container pythonCon">
-                            <img src="assets/images/python.png" alt="Python logo">
-                        </div>
-                        <h3>Python</h3>
-                        <span class="python">72%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container sqlCon">
-                            <img src="assets/images/sql.png" alt="SQL logo">
-                        </div>
-                        <h3>SQL</h3>
-                        <span class="sql">78%</span>
-                    </div>
-                    <div class="skills-wrapper">
-                        <div class="skillLogo-Container powerbiCon">
-                            <img src="assets/images/powerbi.png" alt="Power BI logo">
-                        </div>
-                        <h3>Power BI</h3>
-                        <span class="powerbi">68%</span>
-                    </div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container htmlCon"><img src="assets/images/HTML.png" alt="HTML5 logo"></div><h3>HTML5</h3><span class="html">95%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container cssCon"><img src="assets/images/CSS3.png" alt="CSS3 logo"></div><h3>CSS3</h3><span class="css">92%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container jsCon"><img src="assets/images/javascript.png" alt="JavaScript logo"></div><h3>JavaScript</h3><span class="javascript">85%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container reactCon"><img src="assets/images/React.png" alt="React.js logo"></div><h3>React.js</h3><span class="react">80%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container bootstrapCon"><img src="assets/images/Bootstrap.png" alt="Bootstrap logo"></div><h3>Bootstrap</h3><span class="bootstrap">88%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container nodeCon"><img src="assets/images/nodejs.png" alt="Node.js logo"></div><h3>Node.js</h3><span class="node">75%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container expressCon"><img src="assets/images/express.png" alt="Express.js logo"></div><h3>Express</h3><span class="express">75%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container mongodbCon"><img src="assets/images/mongodb.png" alt="MongoDB logo"></div><h3>MongoDB</h3><span class="mongodb">70%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container pythonCon"><img src="assets/images/python.png" alt="Python logo"></div><h3>Python</h3><span class="python">72%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container sqlCon"><img src="assets/images/sql.png" alt="SQL logo"></div><h3>SQL</h3><span class="sql">78%</span></div>
+                    <div class="skills-wrapper"><div class="skillLogo-Container powerbiCon"><img src="assets/images/powerbi.png" alt="Power BI logo"></div><h3>Power BI</h3><span class="powerbi">68%</span></div>
                 </div>
             </div>
         </section>
-        <!-- projects -->
+
         <section class="projects" id="projects">
             <div class="title">
                 <h1>Projects</h1>
             </div>
-            <div class="project-Container">
-                <!-- projectContent here  -->
-            </div>
-            <a href="https://github.com/skverma895746" target="_blank">See more projects</a>
+            <div class="project-Container"></div>
+            <a class="section-link" href="https://github.com/skverma895746" target="_blank">See more projects</a>
         </section>
 
-        <!-- certificate and experience  -->
         <section class="certificate-experience" id="certificate-experience">
             <div class="title">
-                <h1>Certificate <span style="color:var(--activeColor)"> & Experience</span></h1>
+                <h1>Certificate <span>& Experience</span></h1>
             </div>
             <div class="cert-experience-container">
-                <div class="cert-experience-card">
-                    <h4>AI Powered Python Micro Course</h4>
-                    <i>Skill Course</i>
-                    <h4>31/03/2026</h4>
-                    <p>Completed a Python course focused on AI concepts and basic programming skills.</p>
-                    <a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-5840DD9FA8" target="_blank">View Certificate</a>
-                </div>
-                <div class="cert-experience-card">
-                    <h4>Power BI Micro Course</h4>
-                    <i>Skill Course</i>
-                    <h4>31/03/2026</h4>
-                    <p>Completed a Power BI course covering basics of data visualization and dashboard creation.</p>
-                    <a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-7BF1CF4EB9" target="_blank">View Certificate</a>
-                </div>
-                <div class="cert-experience-card">
-                    <h4>SQL Micro Course</h4>
-                    <i>Skill Course</i>
-                    <h4>31/03/2026</h4>
-                    <p>Completed a SQL course covering basic database queries and data management.</p>
-                    <a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-B664FEF568" target="_blank">View Certificate</a>
-                </div>
-                <div class="cert-experience-card">
-                    <h4>Web Development Internship</h4>
-                    <i>CodSoft</i>
-                    <h4>23 Oct 2025</h4>
-                    <p>Completed a 4-week web development internship with hands-on project experience.</p>
-                    <a href="https://www.linkedin.com/posts/sandeepkumar8957_web-development-internship-at-codsoft-activity-7387431854443999232-l54p" target="_blank">View Certificate</a>
-                </div>
-                <div class="cert-experience-card">
-                    <h4>Web Development Course</h4>
-                    <i>Web Expert Software Private Limited</i>
-                    <h4>13 Dec 2025</h4>
-                    <p>Completed a 2-month web development course with hands-on practice.</p>
-                    <a href="https://www.linkedin.com/posts/sandeepkumar8957_training-certificate-activity-7420453568509501441-30JA" target="_blank">View Certificate</a>
-                </div>
+                <div class="cert-experience-card"><h4>AI Powered Python Micro Course</h4><i>Skill Course</i><h4>31/03/2026</h4><p>Completed a Python course focused on AI concepts and basic programming skills.</p><a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-5840DD9FA8" target="_blank">View Certificate</a></div>
+                <div class="cert-experience-card"><h4>Power BI Micro Course</h4><i>Skill Course</i><h4>31/03/2026</h4><p>Completed a Power BI course covering basics of data visualization and dashboard creation.</p><a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-7BF1CF4EB9" target="_blank">View Certificate</a></div>
+                <div class="cert-experience-card"><h4>SQL Micro Course</h4><i>Skill Course</i><h4>31/03/2026</h4><p>Completed a SQL course covering basic database queries and data management.</p><a href="https://exam.skillcourse.in/student/view_certificate?uid=SC-B664FEF568" target="_blank">View Certificate</a></div>
+                <div class="cert-experience-card"><h4>Web Development Internship</h4><i>CodSoft</i><h4>23 Oct 2025</h4><p>Completed a 4-week web development internship with hands-on project experience.</p><a href="https://www.linkedin.com/posts/sandeepkumar8957_web-development-internship-at-codsoft-activity-7387431854443999232-l54p" target="_blank">View Certificate</a></div>
+                <div class="cert-experience-card"><h4>Web Development Course</h4><i>Web Expert Software Private Limited</i><h4>13 Dec 2025</h4><p>Completed a 2-month web development course with hands-on practice.</p><a href="https://www.linkedin.com/posts/sandeepkumar8957_training-certificate-activity-7420453568509501441-30JA" target="_blank">View Certificate</a></div>
             </div>
         </section>
 
-        <!-- contact me  -->
         <section id="contact" class="contact">
-            <h1>Contact <span style="color:var(--activeColor)">Me</span></h1>
+            <div class="title">
+                <h1>Contact <span>Me</span></h1>
+            </div>
             <div class="contact-container">
                 <form class="contact-form" action="#" method="post">
                     <span id="error"></span>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
-                    </div>
+                    <div class="form-group"><input type="text" id="name" name="name" placeholder="Enter your name" required></div>
+                    <div class="form-group"><input type="email" id="email" name="email" placeholder="Enter your email" required></div>
+                    <div class="form-group"><input type="text" id="subject" name="subject" placeholder="Enter subject" required></div>
+                    <div class="form-group message"><textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea></div>
                     <button type="submit" id="button">Send Message</button>
                 </form>
             </div>
         </section>
-        <!-- footer  -->
+
         <footer class="footer">
-            <p>© 2026 Sandeep Verma. All rights reserved.</p>
+            <p>Copyright 2026 Sandeep Verma. All rights reserved.</p>
             <p>Designed and developed by Sandeep Verma</p>
             <div class="footer-links">
-                <!-- FIX 10: Corrected footer hrefs to match actual section IDs -->
                 <a href="#main">Home</a>
                 <a href="#aboutMe">About</a>
                 <a href="#education">Education</a>
@@ -371,16 +202,9 @@
             </div>
         </footer>
     </div>
-    <script src="assets/js/index.js"></script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var Typed = new Typed("#autotype", {
-            strings: ["Programmer", "Developer", "Designer", "Coder", "Data Analyst"],
-            typeSpeed: 150,
-            backSpeed: 150,
-            loop: true
-        });
-    </script>
+    <script src="assets/js/portfolio.js"></script>
 </body>
 
 </html>
