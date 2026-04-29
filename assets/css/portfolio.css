@@ -186,11 +186,20 @@ a {
 
 main,
 section {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+main {
+    min-height: 100svh;
     justify-content: center;
     padding: 110px clamp(18px, 5vw, 72px) 72px;
+}
+
+section {
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 96px clamp(18px, 5vw, 72px) 72px;
 }
 
 .main {
@@ -662,10 +671,15 @@ textarea:focus {
         padding-right: 12px;
     }
 
-    main,
     section {
-        min-height: auto;
-        padding-top: 98px;
+        min-height: 0;
+        justify-content: flex-start;
+        padding: 84px 16px 56px;
+    }
+
+    main {
+        min-height: 100svh;
+        padding: 92px 16px 44px;
     }
 
     .contentContainer,
