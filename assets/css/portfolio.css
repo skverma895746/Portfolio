@@ -610,6 +610,34 @@ textarea:focus {
 }
 
 @media (max-width: 1120px) {
+    .skillCon,
+    .project-Container,
+    .cert-experience-container {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 1180px) {
+    .educationContainer {
+        align-items: stretch;
+    }
+
+    .edu-cardCon,
+    .edu-card {
+        height: 100%;
+    }
+
+    .edu-card {
+        min-height: 230px;
+    }
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        padding-left: 16px;
+        padding-right: 12px;
+    }
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -641,34 +669,6 @@ textarea:focus {
     .mobileIcon {
         display: inline-grid;
         place-items: center;
-    }
-
-    .skillCon,
-    .project-Container,
-    .cert-experience-container {
-        grid-template-columns: repeat(3, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 1180px) {
-    .educationContainer {
-        align-items: stretch;
-    }
-
-    .edu-cardCon,
-    .edu-card {
-        height: 100%;
-    }
-
-    .edu-card {
-        min-height: 230px;
-    }
-}
-
-@media (max-width: 780px) {
-    .navbar {
-        padding-left: 16px;
-        padding-right: 12px;
     }
 
     section {
