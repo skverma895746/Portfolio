@@ -282,10 +282,26 @@ section {
     margin-top: 16px;
 }
 
+.section-button {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    margin-top: 18px;
+}
+
+.section-button i {
+    margin-left: 6px;
+}
+
+.section-link i {
+    margin-left: 6px;
+}
+
 .socialMedia a:hover,
 .button a:hover,
 .textContents a:hover,
 .section-link:hover,
+.section-button:hover,
 .cert-experience-card a:hover,
 .contact-form button:hover {
     transform: translateY(-3px);
@@ -506,6 +522,30 @@ section {
     display: grid;
     gap: 8px;
     padding: 16px;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.project-link {
+    color: var(--activeColor);
+    text-decoration: underline;
+    font: inherit;
+    font-size: 0.86rem;
+    white-space: nowrap;
+}
+
+.project-link i {
+    margin-right: 4px;
+}
+
+.project-link:hover {
+    text-decoration-thickness: 2px;
 }
 
 .projects,

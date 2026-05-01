@@ -81,31 +81,33 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "FreeStudyHub",
             image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
             content: "An online learning platform providing study materials, notes, and resources for students.",
-            link: "https://skverma895746.github.io/FreeStudyHub/"
+            codeUrl: "https://github.com/skverma895746/FreeStudyHubWithbackend.git",
+            liveUrl: "https://skverma895746.github.io/FreeStudyHub/"
         },
         {
             title: "Note App",
             image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80",
             content: "A simple and efficient note-taking application to create, edit, and manage daily notes.",
-            link: "https://github.com/skverma895746/Note-Api.git"
+            codeUrl: "https://github.com/skverma895746/Note-Api.git"
         },
         {
             title: "CT Paper",
             image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
             content: "A platform to access and manage class test papers for practice and preparation.",
-            link: "https://skverma895746.github.io/RECB-All-CT-papers/"
+            codeUrl: "https://github.com/skverma895746/RECB-All-CT-papers",
+            liveUrl: "https://skverma895746.github.io/RECB-All-CT-papers/"
         },
         {
             title: "Sales Dashboard",
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
             content: "An interactive Power BI dashboard that tracks sales performance, highlights trends, and turns business data into clear visual insights.",
-            link: "https://github.com/skverma895746/Data-Analyst.git"
+            codeUrl: "https://github.com/skverma895746/Data-Analyst.git"
         },
         {
             title: "Dictionary App",
             image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80",
             content: "A web application for searching word meanings, definitions, and pronunciations.",
-            link: "https://github.com/skverma895746/JavaScript-project.git"
+            codeUrl: "https://github.com/skverma895746/JavaScript-project.git"
         },
     ];
 
@@ -118,7 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="projectContent">
                     <h4>${project.title}</h4>
-                    <p>${project.content} <a href="${project.link}" target="_blank">Click here</a></p>
+                    <p>${project.content}</p>
+                    <div class="project-links">
+                        <a class="project-link code-link" href="${project.codeUrl}" target="_blank" rel="noreferrer">View Code</a>
+                        ${project.liveUrl ? `<a class="project-link live-link" href="${project.liveUrl}" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live View</a>` : ""}
+                    </div>
                 </div>
             </div>
         `).join("");
