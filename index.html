@@ -5,62 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my portfolio</title>
+
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="assets/css/index.css">
+
 </head>
+<!-- END: Head Section -->
 
 <body>
+
+    <!-- ===== LOADER SECTION ===== -->
+    <!-- Shown while the page is loading, hidden after load completes -->
     <div class="loader" aria-label="Loading portfolio">
         <div class="spinCon">
+            <!-- Spinner animation element -->
             <div class="spiner"></div>
         </div>
     </div>
+    <!-- END: Loader Section -->
 
+
+    <!-- ===== MAIN CONTENT SECTION ===== -->
     <main class="container">
+
+        <!-- Greeting Block: Shows time-based greeting (e.g. Good Morning) -->
         <div class="greet">
             <p>Portfolio Gateway</p>
-            <h2><!-- greeting word here --></h2>
+            <h2><!-- greeting word is inserted here dynamically via JavaScript --></h2>
         </div>
 
+        <!-- Welcome Heading -->
         <div class="welcome">
             <h1>Welcome to my portfolio</h1>
         </div>
 
+        <!-- Action Buttons: Go Back & View Portfolio -->
         <div class="button-group">
+            <!-- Go Back Button: navigates to the previous page -->
             <button class="btn btn-secondary" type="button" onclick="window.history.back()">Go Back</button>
+
+            <!-- View Portfolio Button: redirects to portfolio page -->
             <button class="btn btn-primary" type="button" onclick="window.location.href='portfolio.html'">View Portfolio</button>
         </div>
-    </main>
 
+    </main>
+    <!-- END: Main Content Section -->
+
+
+    <!-- ===== JAVASCRIPT SECTION ===== -->
     <script>
+
+        // ---- Loader Hide Logic ----
+        // Waits for the full page to load, then hides the loader with a smooth delay
         window.addEventListener("load", function () {
             const loader = document.querySelector(".loader");
 
+            // Step 1: Add hidden class after 900ms (triggers CSS fade-out animation)
             setTimeout(() => {
                 loader.classList.add("loader-hidden");
             }, 900);
 
+            // Step 2: Completely remove loader from view after 1400ms
             setTimeout(() => {
                 loader.style.display = "none";
             }, 1400);
         });
 
+
+        // ---- Time-Based Greeting Logic ----
+        // Selects the h2 inside .greet and sets greeting based on current hour
         const greet = document.querySelector(".greet h2");
         const now = new Date();
-        const hours = now.getHours();
+        const hours = now.getHours(); // Gets current hour (0-23)
 
         if (hours >= 5 && hours < 12) {
+            // Morning: 5 AM to 11:59 AM
             greet.textContent = "Good Morning";
         } else if (hours >= 12 && hours < 17) {
+            // Afternoon: 12 PM to 4:59 PM
             greet.textContent = "Good Afternoon";
         } else if (hours >= 17 && hours < 21) {
+            // Evening: 5 PM to 8:59 PM
             greet.textContent = "Good Evening";
         } else {
+            // Night: 9 PM to 4:59 AM
             greet.textContent = "Good Night";
         }
+
     </script>
+    <!-- END: JavaScript Section -->
+
+
 </body>
+<!-- END: Body -->
 
 </html>
