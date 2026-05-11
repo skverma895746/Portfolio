@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Right click band
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+});
+
+// F12 aur shortcuts band
+document.addEventListener("keydown", (e) => {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I") ||
+        (e.ctrlKey && e.shiftKey && e.key === "J") ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+    }
+});
     // Element selection
     const themeToggle = document.querySelector("#themeToggle");
     const navBar = document.querySelector(".navbar .nav-links");
