@@ -1,0 +1,84 @@
+SANDEEP KUMAR
+Web Developer | Full Stack Development Enthusiast | Data Analyst Enthusiast
+Phone: +91 8957461049
+LinkedIn: https://www.linkedin.com/in/sandeepkumar8957/
+GitHub: https://github.com/skverma895746
+
+PROFESSIONAL SUMMARY
+B.Tech Information Technology student with strong skills in front-end web development, full-stack development, and data analytics. Experienced in building responsive web applications using HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB. Skilled in SQL, Python, Power BI, dashboard creation, problem solving, and clean code practices. Seeking entry-level opportunities in Web Development, Front-End Development, Full Stack Development, or Data Analytics.
+
+TECHNICAL SKILLS
+Frontend: HTML5, CSS3, JavaScript, React.js, Bootstrap, Responsive Design, DOM Manipulation
+Backend: Node.js, Express.js, REST API Basics
+Database: MongoDB, SQL, Database Queries, Data Management
+Data Analytics: Power BI, Dashboards, Data Visualization, Data Cleaning, Business Insights
+Programming: Python, JavaScript, Problem Solving, Debugging
+Tools: Git, GitHub, VS Code, Browser DevTools
+
+PROJECTS
+FreeStudyHub - Online Learning Platform
+Code: https://github.com/skverma895746/FreeStudyHubWithbackend.git
+Live: https://skverma895746.github.io/FreeStudyHub/
+- Built a responsive learning platform for study materials, notes, and student resources.
+- Implemented clean UI structure using HTML, CSS, JavaScript, and backend project concepts.
+- Managed source code and version control using GitHub.
+
+Note App - Note Management Application
+Code: https://github.com/skverma895746/Note-Api.git
+- Developed a note-taking application for creating, editing, and managing daily notes.
+- Applied API-based development concepts and structured code organization.
+- Focused on usability, efficient data handling, and maintainable JavaScript logic.
+
+CT Paper - Class Test Paper Platform
+Code: https://github.com/skverma895746/RECB-All-CT-papers
+Live: https://skverma895746.github.io/RECB-All-CT-papers/
+- Built a web platform to access and manage class test papers for student practice.
+- Organized academic resources with a simple, responsive, and accessible interface.
+- Published the project using GitHub Pages for live access.
+
+Sales Dashboard - Power BI Data Analytics Project
+Code: https://github.com/skverma895746/Data-Analyst.git
+- Created an interactive Power BI dashboard to track sales performance and business trends.
+- Used data visualization techniques to convert raw data into clear and practical insights.
+- Designed dashboard views for quick comparison, analysis, and decision support.
+
+File Upload API - Backend API Project
+Code: https://github.com/skverma895746/File-Upload-API.git
+- Built a backend API for uploading files and handling multipart form data.
+- Implemented file handling workflow for receiving, storing, and managing uploaded files.
+- Practiced backend development concepts including API routing, request handling, and server-side validation.
+
+EXPERIENCE
+Web Development Intern - CodSoft
+October 2025
+- Completed a 4-week web development internship with hands-on project practice.
+- Worked on responsive layouts, front-end logic, and project-based web development tasks.
+- Strengthened skills in HTML, CSS, JavaScript, GitHub, and practical problem solving.
+
+Web Development Trainee - Web Expert Software Private Limited
+December 2025
+- Completed a 2-month web development course with hands-on coding practice.
+- Built foundational knowledge in web design, front-end development, and project workflow.
+
+EDUCATION
+Bachelor of Technology in Information Technology - Rajkiya Engineering College, Bijnor
+2024 - Present
+
+Diploma in Engineering, Information Technology - Government Polytechnic, Lucknow
+Completed 2024
+
+Intermediate, Science - Divyabha Intermediate College, Ballia
+Completed 2021
+
+High School - Divyabha Intermediate College, Ballia
+Completed 2019
+
+CERTIFICATIONS
+- AI Powered Python Micro Course - Skill Course, 31 March 2026
+- Power BI Micro Course - Skill Course, 31 March 2026
+- SQL Micro Course - Skill Course, 31 March 2026
+- Web Development Internship - CodSoft, 23 October 2025
+- Web Development Course - Web Expert Software Private Limited, 13 December 2025
+
+CAREER GOAL
+Motivated to contribute to real-world web development and data analytics projects while continuously improving technical skills, problem-solving ability, and professional impact.

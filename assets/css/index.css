@@ -1,3 +1,7 @@
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -58,6 +62,17 @@ body::before {
     opacity: 0.35;
 }
 
+@media (max-width: 620px) {
+    body {
+        padding: 16px;
+        overflow-y: auto;
+    }
+}
+
+/* ============================================================
+   GATEWAY CARD
+   ============================================================ */
+
 .container {
     position: relative;
     width: min(92vw, 760px);
@@ -102,6 +117,22 @@ body::before {
     background: linear-gradient(90deg, transparent, var(--cyan), var(--gold), transparent);
 }
 
+@media (max-width: 620px) {
+    .container {
+        width: 100%;
+        min-height: 430px;
+        padding: 34px 22px;
+    }
+
+    .container::before {
+        inset: 12px;
+    }
+}
+
+/* ============================================================
+   GREETING CONTENT
+   ============================================================ */
+
 .greet {
     position: relative;
     z-index: 1;
@@ -138,6 +169,10 @@ body::before {
     font-weight: 800;
     line-height: 1.02;
 }
+
+/* ============================================================
+   ACTION BUTTONS
+   ============================================================ */
 
 .button-group {
     position: relative;
@@ -192,6 +227,20 @@ body::before {
     outline-offset: 4px;
 }
 
+@media (max-width: 620px) {
+    .button-group {
+        width: 100%;
+    }
+
+    .btn {
+        width: min(100%, 270px);
+    }
+}
+
+/* ============================================================
+   LOADER
+   ============================================================ */
+
 .loader {
     position: fixed;
     inset: 0;
@@ -229,6 +278,10 @@ body::before {
     animation: spiner 900ms linear infinite;
 }
 
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
 @keyframes spiner {
     to {
         transform: rotate(360deg);
@@ -244,30 +297,5 @@ body::before {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-@media (max-width: 620px) {
-    body {
-        padding: 16px;
-        overflow-y: auto;
-    }
-
-    .container {
-        width: 100%;
-        min-height: 430px;
-        padding: 34px 22px;
-    }
-
-    .container::before {
-        inset: 12px;
-    }
-
-    .button-group {
-        width: 100%;
-    }
-
-    .btn {
-        width: min(100%, 270px);
     }
 }

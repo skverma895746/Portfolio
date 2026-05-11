@@ -1,0 +1,131 @@
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+:root {
+    --bg: #090b1a;
+    --surface: rgba(18, 24, 45, 0.88);
+    --card: rgba(25, 35, 62, 0.84);
+    --card-strong: #111827;
+    --nav: rgba(9, 11, 26, 0.9);
+    --text: #f9fafb;
+    --muted: #b8c2d6;
+    --line: rgba(255, 255, 255, 0.13);
+    --activeColor: #facc15;
+    --accent: #10b981;
+    --accent2: #22d3ee;
+    --success: #22c55e;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --gradient: linear-gradient(135deg, #10b981, #22d3ee 55%, #facc15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--muted);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 15% 12%, rgba(52, 211, 153, 0.13), transparent 28%),
+        radial-gradient(circle at 85% 16%, rgba(34, 211, 238, 0.16), transparent 30%),
+        radial-gradient(circle at 78% 88%, rgba(248, 184, 78, 0.13), transparent 30%),
+        var(--bg);
+    background-size: 44px 44px, 44px 44px, auto, auto, auto, auto;
+
+    & a {
+        color: inherit;
+    }
+}
+
+/* ============================================================
+   CERTIFICATE & EXPERIENCE SECTION
+   ============================================================ */
+
+.certificate-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 72px clamp(18px, 5vw, 72px);
+
+    & .cert-experience-container {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 18px;
+
+        & .cert-experience-card {
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 34%), var(--card);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+            transition: transform 180ms ease, box-shadow 180ms ease;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 24px 54px rgba(0, 0, 0, 0.26);
+            }
+
+            & h4 {
+                color: var(--text);
+                font-size: 1rem;
+            }
+
+            & i {
+                color: var(--activeColor);
+                font-style: normal;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+
+            & p {
+                line-height: 1.65;
+                font-size: 0.92rem;
+                color: var(--muted);
+            }
+
+            & a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 9px;
+                margin-top: auto;
+                min-height: 38px;
+                font-size: 0.9rem;
+                font-weight: 800;
+                border: 1px solid var(--line);
+                border-radius: 6px;
+                color: var(--text);
+                text-decoration: none;
+                background: rgba(255, 255, 255, 0.08);
+                transition: transform 180ms ease, box-shadow 180ms ease;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
+                }
+            }
+        }
+    }
+}

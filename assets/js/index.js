@@ -1,8 +1,5 @@
-// theme 
-// document.body.classList.toggle("light", themeToggle.checked);
-
-// navbar 
 document.addEventListener("DOMContentLoaded", () => {
+    // Theme toggle
     const themeToggle = document.querySelector("#themeToggle");
     if (themeToggle) {
         themeToggle.addEventListener("change", (e) => {
@@ -11,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Mobile navigation
     const navBar = document.querySelector(".navbar .nav-links");
     const Toggle = document.querySelector(".mobileIcon");
     if (navBar && Toggle) {
@@ -26,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    // navbar tracking
+
+    // Active navigation link
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".navbar a");
 
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // form data handle
+    // Contact form
     const form = document.querySelector(".contact-form");
     const error = document.querySelector("#error")
     const button = document.querySelector("#button");
@@ -94,7 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
         });
     }
-    //   #skills mover 
+
+    // Skill animation
     function Spinner(className, percentage, skillContainer) {
         const skillCon = document.querySelector(skillContainer);
         const ClassName = document.querySelector(className);
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Spinner(".sql", 80, ".sqlCon");
     Spinner(".powerbi", 75, ".powerbiCon");
 
-    // project content 
+    // Project cards
     const projectContent = [
         {
             title: "FreeStudyHub",
@@ -149,10 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
             link:"https://github.com/skverma895746/Data-Analyst.git"
         },
         {
-            title: "Dictionary App",
-            image: "https://codingartistweb.com/wp-content/uploads/2021/09/dictionary-01.png",
-            content: "A web application that allows users to search word meanings, definitions, and pronunciations instantly.",
-            link:"https://github.com/skverma895746/JavaScript-project.git"
+            title: "File Upload API",
+            image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+            content: "A backend API for uploading files, handling multipart form data, and managing uploaded file records.",
+            link:"https://github.com/skverma895746/File-Upload-API.git"
         },
     ];
     const projectCon = document.querySelector(".project-Container");
@@ -174,5 +174,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     ProjectMaterial();
-    //  end 
 });
