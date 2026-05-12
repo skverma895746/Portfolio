@@ -33,6 +33,78 @@ document.addEventListener("DOMContentLoaded", () => {
             content: "A backend API for uploading files, handling multipart form data, and managing uploaded file records.",
             codeUrl: "https://github.com/skverma895746/File-Upload-API.git"
         },
+  {
+        title: "Calculator",
+        image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=900&q=80",
+        content: "A fully functional calculator built with JavaScript supporting basic arithmetic operations.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/calculator.html"
+    },
+    {
+        title: "To-Do List",
+        image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80",
+        content: "A task management app with full CRUD operations to create, edit, and delete daily tasks.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/todolist.html"
+    },
+    {
+        title: "Password Generator",
+        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80",
+        content: "A secure password generator that creates strong random passwords with custom options.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/passwordgenerator.html"
+    },
+    {
+        title: "Digital Watch",
+        image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=900&q=80",
+        content: "A real-time digital watch displaying live time using JavaScript Date API.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/digitalwatch.html"
+    },
+    {
+        title: "Image Gallery",
+        image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80",
+        content: "A responsive image gallery with smooth hover effects and interactive UI.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/imagegallery.html"
+    },
+    {
+        title: "Guess The Number Game",
+        image: "https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=900&q=80",
+        content: "A fun number guessing game with hints and score tracking built with JavaScript logic.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/guessanumbergame.html"
+    },
+    {
+        title: "Temperature Converter",
+        image: "https://images.unsplash.com/photo-1580169980114-ccd0babfa840?auto=format&fit=crop&w=900&q=80",
+        content: "A utility app to convert temperature between Celsius, Fahrenheit, and Kelvin.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/tempratureconveter.html"
+    },
+    {
+        title: "QR Code Generator",
+        image: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?auto=format&fit=crop&w=900&q=80",
+        content: "A QR code generator that converts any text or URL into a scannable QR code.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/Qrcodegenerator.html"
+    },
+    {
+        title: "Text To Voice Converter",
+        image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80",
+        content: "A text-to-speech app using Web Speech API to convert written text into audio.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/texttovoiceconveter.html"
+    },
+    {
+        title: "Login Page",
+        image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=900&q=80",
+        content: "A clean and responsive login page UI with form validation using JavaScript.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/loginPage.html"
+    },
+    {
+        title: "Image Slider",
+        image: "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?auto=format&fit=crop&w=900&q=80",
+        content: "An auto-sliding image carousel with manual controls built using vanilla JavaScript.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/imageSlider.html"
+    },
+    {
+        title: "Typing Test",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+        content: "A typing speed test app that measures WPM and accuracy in real time.",
+        codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/typingtest.html"
+    },
     ];
 
     const projectCon = document.querySelector(".project-Container");
