@@ -76,6 +76,9 @@ body.theme {
     --shadow: rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, #059669, #34d399 55%, #a7f3d0);
 } */
+ body.blur-page{
+    filter:blur(10px);
+ }
 
 html {
     scroll-behavior: smooth;
