@@ -349,6 +349,7 @@ section {
             align-items: center;
             justify-content: center;
             gap: 9px;
+            padding:0 20px;
             min-height: 50px;
             border: 1px solid transparent;
             border-radius: 6px;
@@ -444,9 +445,8 @@ section {
                     align-items: center;
                     justify-content: center;
                     gap: 9px;
-                    min-width: 145px;
                     min-height: 50px;
-                    padding: 0 20px;
+                    padding: 0 22px;
                     border: 1px solid transparent;
                     border-radius: 6px;
                     color: #07111b;
