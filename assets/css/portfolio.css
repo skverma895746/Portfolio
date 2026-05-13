@@ -33,7 +33,7 @@
 }
 
 /* Purple Night Theme */
-/* body.theme {
+body.theme {
     --bg: #0d0b1a;
     --surface: rgba(20, 15, 50, 0.88);
     --card: rgba(30, 20, 60, 0.84);
@@ -51,10 +51,10 @@
     --radial1: rgba(124, 58, 237, 0.13);
     --radial2: rgba(240, 171, 252, 0.16);
     --radial3: rgba(167, 139, 250, 0.13);
-} */
+}
 
 /* Midnight Red Theme */
-body.theme {
+/* body.theme {
     --bg: #0f0a0a;
     --surface: rgba(40, 15, 15, 0.88);
     --card: rgba(40, 15, 15, 0.84);
@@ -72,7 +72,7 @@ body.theme {
     --radial1: rgba(220, 38, 38, 0.13);
     --radial2: rgba(251, 191, 36, 0.16);
     --radial3: rgba(248, 113, 113, 0.13);
-}
+} */
 
 /* Ocean Green Theme */
 /* body.theme {
@@ -95,14 +95,13 @@ body.theme {
     --radial3: rgba(52, 211, 153, 0.13);
 } */
 
-html {
+html,body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
-    overflow-x: hidden;
     color: var(--muted);
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     background:
@@ -255,7 +254,7 @@ section {
 }
 
 main {
-    min-height: 100svh;
+    min-height: 100vh;
     justify-content: center;
     padding: 110px clamp(18px, 5vw, 72px) 72px;
 }
