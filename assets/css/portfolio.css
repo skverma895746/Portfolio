@@ -27,8 +27,13 @@
     --success: #22c55e;
     --shadow: rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, #10b981, #22d3ee 55%, #facc15);
+    --radial1: rgba(52, 211, 153, 0.13);
+    --radial2: rgba(34, 211, 238, 0.16);
+    --radial3: rgba(248, 184, 78, 0.13);
 }
-body.theme {
+
+/* Purple Night Theme */
+/* body.theme {
     --bg: #0d0b1a;
     --surface: rgba(20, 15, 50, 0.88);
     --card: rgba(30, 20, 60, 0.84);
@@ -43,8 +48,13 @@ body.theme {
     --success: #a78bfa;
     --shadow: rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, #7c3aed, #a78bfa 55%, #f0abfc);
-}
-/* body.theme {
+    --radial1: rgba(124, 58, 237, 0.13);
+    --radial2: rgba(240, 171, 252, 0.16);
+    --radial3: rgba(167, 139, 250, 0.13);
+} */
+
+/* Midnight Red Theme */
+body.theme {
     --bg: #0f0a0a;
     --surface: rgba(40, 15, 15, 0.88);
     --card: rgba(40, 15, 15, 0.84);
@@ -59,8 +69,13 @@ body.theme {
     --success: #f87171;
     --shadow: rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, #dc2626, #f87171 55%, #fbbf24);
-} */
- /* body.theme {
+    --radial1: rgba(220, 38, 38, 0.13);
+    --radial2: rgba(251, 191, 36, 0.16);
+    --radial3: rgba(248, 113, 113, 0.13);
+}
+
+/* Ocean Green Theme */
+/* body.theme {
     --bg: #050f0d;
     --surface: rgba(10, 35, 25, 0.88);
     --card: rgba(10, 35, 25, 0.84);
@@ -75,10 +90,10 @@ body.theme {
     --success: #34d399;
     --shadow: rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, #059669, #34d399 55%, #a7f3d0);
+    --radial1: rgba(5, 150, 105, 0.13);
+    --radial2: rgba(167, 243, 208, 0.16);
+    --radial3: rgba(52, 211, 153, 0.13);
 } */
- body.blur-page{
-    filter:blur(10px);
- }
 
 html {
     scroll-behavior: smooth;
@@ -92,9 +107,9 @@ body {
     background:
         linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        radial-gradient(circle at 15% 12%, rgba(52, 211, 153, 0.13), transparent 28%),
-        radial-gradient(circle at 85% 16%, rgba(34, 211, 238, 0.16), transparent 30%),
-        radial-gradient(circle at 78% 88%, rgba(248, 184, 78, 0.13), transparent 30%),
+        radial-gradient(circle at 15% 12%, var(--radial1), transparent 28%),
+        radial-gradient(circle at 85% 16%, var(--radial2), transparent 30%),
+        radial-gradient(circle at 78% 88%, var(--radial3), transparent 30%),
         var(--bg);
     background-size: 44px 44px, 44px 44px, auto, auto, auto, auto;
 
@@ -325,12 +340,14 @@ section {
     }
 
     & .button {
+        display: flex;
+        gap: 15px;
         & a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 9px;
-            min-width: 190px;
+            min-width: 180px;
             min-height: 50px;
             padding: 0 22px;
             border: 1px solid transparent;
@@ -411,34 +428,33 @@ section {
             gap: 24px;
             color: var(--muted);
             line-height: 1.9;
-           & .button-group{
-                      display: flex;
-                      justify-content:center;
-                      align-items: center;
-                      gap:15px;
-             & a {
-                display: inline-flex;
-                align-items: center;
+            & .button-group {
+                display: flex;
                 justify-content: center;
-                gap: 9px;
-                min-width:48%;
-                min-height: 50px;
-                padding: 0 22px;
-                border: 1px solid transparent;
-                border-radius: 6px;
-                color: #07111b;
-                text-decoration: none;
-                font-weight: 800;
-                background: var(--gradient);
-                transition: transform 180ms ease, box-shadow 180ms ease;
+                align-items: center;
+                gap: 15px;
+                & a {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 9px;
+                    min-width: 48%;
+                    min-height: 50px;
+                    padding: 0 22px;
+                    border: 1px solid transparent;
+                    border-radius: 6px;
+                    color: #07111b;
+                    text-decoration: none;
+                    font-weight: 800;
+                    background: var(--gradient);
+                    transition: transform 180ms ease, box-shadow 180ms ease;
 
-                &:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
+                    }
                 }
             }
-           }
- 
         }
     }
 }
@@ -769,29 +785,30 @@ section {
             }
         }
     }
-      &>a {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                gap: 9px;
-                  min-width: 190px;
-                  min-height: 50px;
-                   padding: 0 22px;
-                    margin-top: 16px;
-                font-size: 0.9rem;
-                font-weight: 800;
-                border: 1px solid var(--line);
-                border-radius: 6px;
-                color:  #07111b;
-                text-decoration: none;
-                background: var(--gradient);
-                transition: transform 180ms ease, box-shadow 180ms ease;
 
-                &:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
-                }
-            }
+    & > a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-width: 190px;
+        min-height: 50px;
+        padding: 0 22px;
+        margin-top: 16px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: #07111b;
+        text-decoration: none;
+        background: var(--gradient);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
+        }
+    }
 }
 
 /* ============================================================
