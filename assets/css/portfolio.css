@@ -347,9 +347,8 @@ section {
             align-items: center;
             justify-content: center;
             gap: 9px;
-            min-width: 180px;
             min-height: 50px;
-            padding: 0 22px;
+            padding: 10px 20px;
             border: 1px solid transparent;
             border-radius: 6px;
             color: #07111b;
@@ -362,6 +361,12 @@ section {
                 transform: translateY(-3px);
                 box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
             }
+      
+        }
+        & #getIntouch{
+            background: none;
+            border:1px solid var(--muted);
+            color:var(--text)
         }
     }
 }
@@ -430,7 +435,7 @@ section {
             line-height: 1.9;
             & .button-group {
                 display: flex;
-                justify-content: center;
+                justify-content:flex-start;
                 align-items: center;
                 gap: 15px;
                 & a {
@@ -438,7 +443,6 @@ section {
                     align-items: center;
                     justify-content: center;
                     gap: 9px;
-                    min-width: 48%;
                     min-height: 50px;
                     padding: 0 22px;
                     border: 1px solid transparent;
@@ -454,6 +458,11 @@ section {
                         box-shadow: 0 18px 34px rgba(34, 211, 238, 0.16);
                     }
                 }
+                     & #viewCv{
+            background: none;
+            border:1px solid var(--muted);
+            color:var(--text)
+        }
             }
         }
     }
@@ -926,3 +935,61 @@ section {
         }
     }
 }
+
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+
+/* Hero - page load pe */
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.main .eyebrow    { animation: heroFadeIn 0.6s ease 0.1s  both; }
+.main .heading    { animation: heroFadeIn 0.6s ease 0.25s both; }
+.main .autotyped  { animation: heroFadeIn 0.6s ease 0.4s  both; }
+.main .text       { animation: heroFadeIn 0.6s ease 0.55s both; }
+.main .socialMedia{ animation: heroFadeIn 0.6s ease 0.7s  both; }
+.main .button     { animation: heroFadeIn 0.6s ease 0.85s both; }
+
+/* Scroll animation base state */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state */
+.animate-fade-up.visible,
+.animate-fade-left.visible,
+.animate-fade-right.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Stagger delay for cards */
+.animate-fade-up:nth-child(1)  { transition-delay: 0ms; }
+.animate-fade-up:nth-child(2)  { transition-delay: 80ms; }
+.animate-fade-up:nth-child(3)  { transition-delay: 160ms; }
+.animate-fade-up:nth-child(4)  { transition-delay: 240ms; }
+.animate-fade-up:nth-child(5)  { transition-delay: 320ms; }
+.animate-fade-up:nth-child(6)  { transition-delay: 400ms; }
+.animate-fade-up:nth-child(7)  { transition-delay: 480ms; }
+.animate-fade-up:nth-child(8)  { transition-delay: 560ms; }
+.animate-fade-up:nth-child(9)  { transition-delay: 640ms; }
+.animate-fade-up:nth-child(10) { transition-delay: 720ms; }
+.animate-fade-up:nth-child(11) { transition-delay: 800ms; }

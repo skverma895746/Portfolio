@@ -1,4 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ===== SCROLL ANIMATIONS =====
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+     { threshold: 0.1 }
+    );
+
+    // Section titles
+    document.querySelectorAll(".title").forEach((el) => {
+        el.classList.add("animate-fade-up");
+        observer.observe(el);
+    });
+
+    // About Me - image left, text right
+    const aboutImage = document.querySelector(".aboutMe .image");
+    const aboutText = document.querySelector(".aboutMe .textContents");
+    if (aboutImage) { aboutImage.classList.add("animate-fade-left"); observer.observe(aboutImage); }
+    if (aboutText)  { aboutText.classList.add("animate-fade-right"); observer.observe(aboutText); }
+
+    // Education cards
+    document.querySelectorAll(".edu-cardCon").forEach((el) => {
+        el.classList.add("animate-fade-up");
+        observer.observe(el);
+    });
+
+    // Skills cards
+    document.querySelectorAll(".skills-wrapper").forEach((el) => {
+        el.classList.add("animate-fade-up");
+        observer.observe(el);
+    });
+
+    // Project cards - JS se render hone ke baad
+    setTimeout(() => {
+        document.querySelectorAll(".project-card").forEach((el) => {
+            el.classList.add("animate-fade-up");
+            observer.observe(el);
+        });
+    }, 100);
+
+    // Certificate cards - JS se render hone ke baad
+    setTimeout(() => {
+        document.querySelectorAll(".cert-experience-card").forEach((el) => {
+            el.classList.add("animate-fade-up");
+            observer.observe(el);
+        });
+    }, 100);
+
+    // Contact form
+    const contactForm = document.querySelector(".contact-container");
+    if (contactForm) {
+        contactForm.classList.add("animate-fade-up");
+        observer.observe(contactForm);
+    }
+
+// scroll animatioin end 
+
     // Right click band
 document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
