@@ -444,9 +444,9 @@ section {
                     align-items: center;
                     justify-content: center;
                     gap: 9px;
-                    min-width: 150px;
+                    min-width: 145px;
                     min-height: 50px;
-                    padding: 0 22px;
+                    padding: 0 20px;
                     border: 1px solid transparent;
                     border-radius: 6px;
                     color: #07111b;
