@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
             liveUrl: "https://skverma895746.github.io/FreeStudyHub/"
         },
         {
+            title: "Marks Predictor",
+            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
+            content: "A machine learning project that predicts student marks using input data and performance-based features.",
+            codeUrl: "https://github.com/skverma895746/marks-predictor"
+        },
+        {
+            title: "Fraud Detection System",
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80",
+            content: "A data analytics and machine learning system designed to detect suspicious or fraudulent transactions.",
+            codeUrl: "https://github.com/skverma895746/fraud-detection-system"
+        },
+        {
             title: "Note App",
             image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80",
             content: "A simple and efficient note-taking application to create, edit, and manage daily notes.",
@@ -23,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             title: "Sales Dashboard",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+            image: "assets/images/dashboard.png",
             content: "An interactive Power BI dashboard that tracks sales performance and turns data into clear visual insights.",
             codeUrl: "https://github.com/skverma895746/Data-Analyst.git"
         },
@@ -47,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
         title: "Password Generator",
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=900&q=80",
         content: "A secure password generator that creates strong random passwords with custom options.",
         codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/passwordgenerator.html"
     },
@@ -71,13 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
         title: "Temperature Converter",
-        image: "https://images.unsplash.com/photo-1580169980114-ccd0babfa840?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.unsplash.com/photo-1501837303764-ada599fdac6c?auto=format&fit=crop&w=900&q=80",
         content: "A utility app to convert temperature between Celsius, Fahrenheit, and Kelvin.",
         codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/tempratureconveter.html"
     },
     {
         title: "QR Code Generator",
-        image: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&w=900&q=80",
         content: "A QR code generator that converts any text or URL into a scannable QR code.",
         codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/Qrcodegenerator.html"
     },
@@ -89,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
         title: "Login Page",
-        image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=900&q=80",
         content: "A clean and responsive login page UI with form validation using JavaScript.",
         codeUrl: "https://github.com/skverma895746/JavaScript-project/blob/main/loginPage.html"
     },
