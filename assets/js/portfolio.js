@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // scroll animatioin end 
 
     // Right click band
-// document.addEventListener("contextmenu", (e) => {
-//     e.preventDefault();
-// });
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+});
 
 // F12 aur shortcuts band
 document.addEventListener("keydown", (e) => {
