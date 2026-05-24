@@ -1,4 +1,4 @@
-SANDEEP KUMAR
+SANDEEP VERMA
 Web Developer | Full Stack Development Enthusiast | Data Analyst Enthusiast
 Phone: +91 8957461049
 LinkedIn: https://www.linkedin.com/in/sandeepkumar8957/
@@ -75,6 +75,7 @@ High School - Divyabha Intermediate College, Ballia
 Completed 2019
 
 CERTIFICATIONS
+Web Development - Lenovo LEAP NextGen Scholar Program, BharatCares - 06 May 2026
 - AI Powered Python Micro Course - Skill Course, 31 March 2026
 - Power BI Micro Course - Skill Course, 31 March 2026
 - SQL Micro Course - Skill Course, 31 March 2026

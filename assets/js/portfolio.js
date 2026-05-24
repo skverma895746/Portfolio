@@ -125,6 +125,7 @@ document.addEventListener("keydown", (e) => {
     const skillData = [
         [".html", 95, ".htmlCon"],
         [".css", 92, ".cssCon"],
+        [".tailwind", 85, ".tailwindCon"],
         [".javascript", 85, ".jsCon"],
         [".react", 80, ".reactCon"],
         [".bootstrap", 88, ".bootstrapCon"],

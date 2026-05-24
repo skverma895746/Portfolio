@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandeep Kumar - ATS Resume</title>
+    <title>Sandeep Verma - ATS Resume</title>
     <style>
 * {
     margin: 0;
@@ -67,6 +67,16 @@
             text-decoration: none;
         }
 
+        .repo-link {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .live-link {
+            color: #059669;
+            font-weight: 700;
+        }
+
         .contact,
         .meta {
             margin-top: 2px;
@@ -81,6 +91,31 @@
             margin-top: 3px;
         }
 
+        .resume-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 18px;
+            margin-top: 6px;
+        }
+
+        .resume-row h3 {
+            margin-top: 0;
+            flex: 1;
+        }
+
+        .resume-row .row-title {
+            flex: 1;
+        }
+
+        .resume-row .meta {
+            margin-top: 0;
+            min-width: 175px;
+            text-align: right;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
         @media print {
             body {
                 max-width: none;
@@ -92,20 +127,35 @@
                 margin-top: 8px;
             }
         }
+
+        @media (max-width: 560px) {
+            .resume-row {
+                display: block;
+            }
+
+            .resume-row .meta {
+                min-width: 0;
+                margin-top: 2px;
+                text-align: left;
+                white-space: normal;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Sandeep Kumar</h1>
-        <p class="meta">Web Developer | Full Stack Development Enthusiast | Data Analyst Enthusiast</p>
+        <h1>Sandeep Verma</h1>
+        <p class="meta">Web Developer | Full Stack Enthusiast | Data Analytics Enthusiast</p>
         <p class="contact">
             Phone: +91 8957461049 ||
             Email: <a href="mailto:skverma895746@gmail.com">skverma895746@gmail.com</a> ||
-            LinkedIn: <a href="https://www.linkedin.com/in/sandeepkumar8957/">linkedin.com/in/sandeepkumar8957</a> ||
-            GitHub: <a href="https://github.com/skverma895746">github.com/skverma895746</a> ||
-            Portfolio: <a href="https://skverma895746.github.io/Portfolio/">Portfolio</a> ||
             Location: Uttar Pradesh, India
+        </p>
+        <p class="contact">
+            LinkedIn: <a class="repo-link" href="https://www.linkedin.com/in/sandeepkumar8957/">View</a> ||
+            GitHub: <a class="repo-link" href="https://github.com/skverma895746">View</a> ||
+            Portfolio: <a class="live-link" href="https://skverma895746.github.io/Portfolio/">View</a>
         </p>
     </header>
 
@@ -127,33 +177,33 @@
     <section>
         <h2>Projects</h2>
         <h3>FreeStudyHub - Online Learning Platform</h3>
-        <p class="meta">Code: <a href="https://github.com/skverma895746/FreeStudyHubWithbackend.git">github.com/skverma895746/FreeStudyHubWithbackend.git</a> | Live: <a href="https://skverma895746.github.io/FreeStudyHub/">skverma895746.github.io/FreeStudyHub</a></p>
+        <p class="meta">GitHub: <a class="repo-link" href="https://github.com/skverma895746/FreeStudyHubWithbackend.git">View</a> | Live Demo: <a class="live-link" href="https://skverma895746.github.io/FreeStudyHub/">Live</a></p>
         <ul>
             <li>Built a responsive learning platform for study materials, notes, and student resources.</li>
             <li>Implemented clean UI using HTML, CSS, JavaScript, and backend project concepts.</li>
         </ul>
 
         <h3>Note App - Note Management Application</h3>
-        <p class="meta">Code: <a href="https://github.com/skverma895746/Note-Api.git">github.com/skverma895746/Note-Api.git</a></p>
+        <p class="meta">GitHub: <a class="repo-link" href="https://github.com/skverma895746/Note-Api.git">View</a></p>
         <ul>
             <li>Developed a note-taking app supporting full CRUD operations with REST API and JSON handling.</li>
             <li>Focused on usability, efficient data handling, and maintainable JavaScript logic.</li>
         </ul>
 
         <h3>CT Paper - Class Test Paper Platform</h3>
-        <p class="meta">Code: <a href="https://github.com/skverma895746/RECB-All-CT-papers">github.com/skverma895746/RECB-All-CT-papers</a> | Live: <a href="https://skverma895746.github.io/RECB-All-CT-papers/">skverma895746.github.io/RECB-All-CT-papers</a></p>
+        <p class="meta">GitHub: <a class="repo-link" href="https://github.com/skverma895746/RECB-All-CT-papers">View</a> | Live Demo: <a class="live-link" href="https://skverma895746.github.io/RECB-All-CT-papers/">Live</a></p>
         <ul>
             <li>Built a web platform to access and manage class test papers with a responsive interface.</li>
         </ul>
 
         <h3>Sales Dashboard - Power BI Data Analytics Project</h3>
-        <p class="meta">Code: <a href="https://github.com/skverma895746/Data-Analyst.git">github.com/skverma895746/Data-Analyst.git</a></p>
+        <p class="meta">GitHub: <a class="repo-link" href="https://github.com/skverma895746/Data-Analyst.git">View</a></p>
         <ul>
             <li>Created an interactive Power BI dashboard to track sales performance and business trends.</li>
         </ul>
 
         <h3>File Upload API - Backend API Project</h3>
-        <p class="meta">Code: <a href="https://github.com/skverma895746/File-Upload-API.git">github.com/skverma895746/File-Upload-API.git</a></p>
+        <p class="meta">GitHub: <a class="repo-link" href="https://github.com/skverma895746/File-Upload-API.git">View</a></p>
         <ul>
             <li>Built a backend REST API for uploading files with JSON responses and CRUD-based file handling.</li>
         </ul>
@@ -161,14 +211,18 @@
 
     <section>
         <h2>Experience</h2>
-        <h3>Web Development Intern - CodSoft</h3>
-        <p class="meta">October 2025</p>
+        <div class="resume-row">
+            <h3>Web Development Intern - CodSoft</h3>
+            <p class="meta">October 2025</p>
+        </div>
         <ul>
             <li>Completed a 4-week internship with hands-on project practice in HTML, CSS, JavaScript, and GitHub.</li>
         </ul>
 
-        <h3>Web Development Trainee - Web Expert Software Private Limited</h3>
-        <p class="meta">December 2025</p>
+        <div class="resume-row">
+            <h3>Web Development Trainee - Web Expert Software Private Limited</h3>
+            <p class="meta">December 2025</p>
+        </div>
         <ul>
             <li>Completed a 2-month course building foundational knowledge in web design and front-end development.</li>
         </ul>
@@ -176,25 +230,50 @@
 
     <section>
         <h2>Education</h2>
-        <h3>Bachelor of Technology in Information Technology - Rajkiya Engineering College, Bijnor</h3>
-        <p class="meta">2024 - Present</p>
-        <h3>Diploma in Engineering, Information Technology - Government Polytechnic, Lucknow</h3>
-        <p class="meta">Completed 2024 | Percentage: 74%</p>
-        <h3>Intermediate, Science - Divyabha Intermediate College, Ballia</h3>
-        <p class="meta">Completed 2021 | Percentage: 73%</p>
-        <h3>High School - Divyabha Intermediate College, Ballia</h3>
-        <p class="meta">Completed 2019 | Percentage: 86.5%</p>
+        <div class="resume-row">
+            <h3>Bachelor of Technology in Information Technology - Rajkiya Engineering College, Bijnor</h3>
+            <p class="meta">2024 - Present</p>
+        </div>
+        <div class="resume-row">
+            <h3>Diploma in Engineering, Information Technology - Government Polytechnic, Lucknow</h3>
+            <p class="meta">Completed 2024 | 74%</p>
+        </div>
+        <div class="resume-row">
+            <h3>Intermediate, Science - Divyabha Intermediate College, Ballia</h3>
+            <p class="meta">Completed 2021 | 73%</p>
+        </div>
+        <div class="resume-row">
+            <h3>High School - Divyabha Intermediate College, Ballia</h3>
+            <p class="meta">Completed 2019 | 86.5%</p>
+        </div>
     </section>
 
     <section>
         <h2>Certifications</h2>
-        <ul>
-            <li>AI Powered Python Micro Course - Skill Course, 31 March 2026</li>
-            <li>Power BI Micro Course - Skill Course, 31 March 2026</li>
-            <li>SQL Micro Course - Skill Course, 31 March 2026</li>
-            <li>Web Development Internship - CodSoft, 23 October 2025</li>
-            <li>Web Development Course - Web Expert Software Private Limited, 13 December 2025</li>
-        </ul>
+        <div class="resume-row">
+            <p class="row-title">Web Development - Lenovo LEAP NextGen Scholar Program, BharatCares</p>
+            <p class="meta">06 May 2026</p>
+        </div>
+        <div class="resume-row">
+            <p class="row-title">AI Powered Python Micro Course - Skill Course</p>
+            <p class="meta">31 March 2026</p>
+        </div>
+        <div class="resume-row">
+            <p class="row-title">Power BI Micro Course - Skill Course</p>
+            <p class="meta">31 March 2026</p>
+        </div>
+        <div class="resume-row">
+            <p class="row-title">SQL Micro Course - Skill Course</p>
+            <p class="meta">31 March 2026</p>
+        </div>
+        <div class="resume-row">
+            <p class="row-title">Web Development Internship - CodSoft</p>
+            <p class="meta">23 October 2025</p>
+        </div>
+        <div class="resume-row">
+            <p class="row-title">Web Development Course - Web Expert Software Private Limited</p>
+            <p class="meta">13 December 2025</p>
+        </div>
     </section>
 
     <section>
