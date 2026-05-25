@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Completed a Python course focused on AI concepts and basic programming skills.",
             certUrl: "https://exam.skillcourse.in/student/view_certificate?uid=SC-5840DD9FA8"
         },
+         {
+                    title: "Web Development",
+                    issuer: "Lenovo LEAP NextGen Scholar Program | BharatCares",
+                    date: "06-05-2026",
+                    description: "Completed 60+ hours of learning in Web Development under the Lenovo LEAP NextGen Scholar Program"
+        },
         {
             title: "Power BI Micro Course",
             issuer: "Skill Course",
