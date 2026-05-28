@@ -19,9 +19,9 @@
     --text: #f8fafc;
     --muted: #aebbd0;
     --cyan: #22d3ee;
-    --blue: #38bdf8;
+    --blue: #3b82f6;
     --gold: #f8b84e;
-    --green: #34d399;
+    --green: #22c55e;
 }
 
 html,
@@ -37,15 +37,15 @@ body {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: var(--text);
     background:
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.035) 0.5px, transparent 0.5px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0.5px, transparent 0.5px),
         radial-gradient(circle at 18% 22%, rgba(52, 211, 153, 0.16), transparent 28%),
         radial-gradient(circle at 80% 18%, rgba(34, 211, 238, 0.18), transparent 30%),
         radial-gradient(circle at 78% 82%, rgba(248, 184, 78, 0.16), transparent 28%),
         linear-gradient(135deg, #070b12 0%, #101827 48%, #07111b 100%);
     background-size:
-        42px 42px,
-        42px 42px,
+        20px 20px,
+        20px 20px,
         auto,
         auto,
         auto,

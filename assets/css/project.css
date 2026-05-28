@@ -11,23 +11,25 @@
     -moz-user-select: none;
     -ms-user-select: none;
 }
-
 :root {
-    --bg: #090b1a;
-    --surface: rgba(18, 24, 45, 0.88);
-    --card: rgba(25, 35, 62, 0.84);
-    --card-strong: #111827;
-    --nav: rgba(9, 11, 26, 0.9);
-    --text: #f9fafb;
-    --muted: #b8c2d6;
-    --line: rgba(255, 255, 255, 0.13);
-    --activeColor: #facc15;
-    --accent: #10b981;
-    --accent2: #22d3ee;
+    --bg: #0d0d0d;
+    --surface: rgba(26, 26, 26, 0.9);
+    --card: rgba(30, 30, 30, 0.86);
+    --card-strong: #1a1a1a;
+    --nav: rgba(13, 13, 13, 0.92);
+    --text: #ffffff;
+    --muted: #cccccc;
+    --line: rgba(249, 115, 22, 0.22);
+    --activeColor: #f97316;
+    --accent: #f97316;
+    --accent2: #2196f3;
     --success: #22c55e;
-    --shadow: rgba(0, 0, 0, 0.4);
-    --gradient: linear-gradient(135deg, #10b981, #22d3ee 55%, #facc15);
-}
+    --shadow: rgba(0, 0, 0, 0.5);
+    --gradient: linear-gradient(135deg, #f97316, #ff8c00 52%, #ffb347);
+    --radial1: rgba(249, 115, 22, 0.13);
+    --radial2: rgba(33, 150, 243, 0.14);
+    --radial3: rgba(249, 115, 22, 0.10);
+} 
 
 html {
     scroll-behavior: smooth;
