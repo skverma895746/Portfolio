@@ -13,15 +13,15 @@
 }
 
 :root {
-    --bg: #090d14;
-    --panel: rgba(13, 20, 31, 0.76);
-    --panel-border: rgba(255, 255, 255, 0.14);
-    --text: #f8fafc;
-    --muted: #aebbd0;
-    --cyan: #22d3ee;
-    --blue: #3b82f6;
-    --gold: #f8b84e;
-    --green: #22c55e;
+    --bg: #0d0d0d;
+    --panel: rgba(26, 26, 26, 0.9);
+    --panel-border: rgba(249, 115, 22, 0.22);
+    --text: #ffffff;
+    --muted: #cccccc;
+    --orange: #f97316;
+    --blue: #2196f3;
+    --gold: #ffb347;
+    --gradient: linear-gradient(135deg, #f97316, #ff8c00 52%, #ffb347);
 }
 
 html,
@@ -39,10 +39,10 @@ body {
     background:
         linear-gradient(rgba(255, 255, 255, 0.035) 0.5px, transparent 0.5px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 18% 22%, rgba(52, 211, 153, 0.16), transparent 28%),
-        radial-gradient(circle at 80% 18%, rgba(34, 211, 238, 0.18), transparent 30%),
-        radial-gradient(circle at 78% 82%, rgba(248, 184, 78, 0.16), transparent 28%),
-        linear-gradient(135deg, #070b12 0%, #101827 48%, #07111b 100%);
+        radial-gradient(circle at 18% 22%, rgba(249, 115, 22, 0.13), transparent 28%),
+        radial-gradient(circle at 80% 18%, rgba(33, 150, 243, 0.14), transparent 30%),
+        radial-gradient(circle at 78% 82%, rgba(249, 115, 22, 0.10), transparent 28%),
+        var(--bg);
     background-size:
         20px 20px,
         20px 20px,
@@ -114,7 +114,7 @@ body::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, transparent, var(--cyan), var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--orange), var(--gold), transparent);
 }
 
 @media (max-width: 620px) {
@@ -141,7 +141,7 @@ body::before {
 }
 
 .greet p {
-    color: var(--gold);
+    color: var(--orange);
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -162,7 +162,7 @@ body::before {
 .welcome h1 {
     max-width: 650px;
     color: transparent;
-    background: linear-gradient(110deg, #ffffff 5%, var(--cyan) 32%, var(--blue) 58%, var(--gold) 92%);
+    background: linear-gradient(110deg, #ffffff 5%, var(--orange) 36%, #ff8c00 62%, var(--gold) 92%);
     background-clip: text;
     -webkit-background-clip: text;
     font-size: clamp(2.55rem, 7vw, 5.1rem);
@@ -199,8 +199,8 @@ body::before {
 
 .btn-primary {
     color: #07111b;
-    background: linear-gradient(135deg, var(--cyan), var(--blue) 52%, var(--gold));
-    box-shadow: 0 16px 34px rgba(34, 211, 238, 0.22);
+    background: var(--gradient);
+    box-shadow: 0 16px 34px rgba(249, 115, 22, 0.22);
 }
 
 .btn-secondary {
@@ -214,7 +214,7 @@ body::before {
 }
 
 .btn-primary:hover {
-    box-shadow: 0 20px 44px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 20px 44px rgba(249, 115, 22, 0.3);
 }
 
 .btn-secondary:hover {
@@ -223,7 +223,7 @@ body::before {
 }
 
 .btn:focus-visible {
-    outline: 3px solid rgba(34, 211, 238, 0.42);
+    outline: 3px solid rgba(249, 115, 22, 0.42);
     outline-offset: 4px;
 }
 
@@ -272,8 +272,8 @@ body::before {
     width: 56px;
     height: 56px;
     border: 6px solid rgba(255, 255, 255, 0.22);
-    border-top-color: var(--green);
-    border-right-color: var(--cyan);
+    border-top-color: var(--orange);
+    border-right-color: var(--blue);
     border-radius: 50%;
     animation: spiner 900ms linear infinite;
 }
