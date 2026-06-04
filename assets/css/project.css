@@ -41,10 +41,13 @@ body {
     color: var(--muted);
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
         radial-gradient(circle at 15% 12%, rgba(52, 211, 153, 0.13), transparent 28%),
         radial-gradient(circle at 85% 16%, rgba(34, 211, 238, 0.16), transparent 30%),
         radial-gradient(circle at 78% 88%, rgba(248, 184, 78, 0.13), transparent 30%),
         var(--bg);
+    background-size: 44px 44px, 44px 44px, auto, auto, auto, auto;
 
     & a {
         color: inherit;
