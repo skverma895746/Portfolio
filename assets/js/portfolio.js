@@ -160,6 +160,13 @@ document.addEventListener("keydown", (e) => {
     // Project cards
     const projectContent = [
         {
+            title: "Daily Routine Planner",
+            image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80",
+            content: "A simple and useful daily routine planner web app for organizing tasks, planning the day, and tracking important routine activities.",
+            codeUrl: "https://github.com/skverma895746/DailyRoutinePlanner.git",
+            liveUrl: "https://skverma895746.github.io/DailyRoutinePlanner/"
+        },
+        {
             title: "FreeStudyHub",
             image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
             content: "An online learning platform providing study materials, notes, and resources for students.",
@@ -179,12 +186,7 @@ document.addEventListener("keydown", (e) => {
             codeUrl: "https://github.com/skverma895746/RECB-All-CT-papers",
             liveUrl: "https://skverma895746.github.io/RECB-All-CT-papers/"
         },
-        {
-            title: "Sales Dashboard",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
-            content: "An interactive Power BI dashboard that tracks sales performance, highlights trends, and turns business data into clear visual insights.",
-            codeUrl: "https://github.com/skverma895746/Data-Analyst.git"
-        },
+        
         {
             title: "File Upload API",
             image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
